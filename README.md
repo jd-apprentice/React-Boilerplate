@@ -1,6 +1,6 @@
 # Boilerplate React + Typescript + Mui + Sass + Eslint + Prettier + MobX + Apisauce
 
-![banner](./banner.png)
+![banner](src/assets/images/banner.png)
 ## 📚 Stack & Technologies
 
 - React.js
