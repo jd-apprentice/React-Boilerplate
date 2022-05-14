@@ -1,0 +1,95 @@
+{
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 13,
+      "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+    "rules": {
+      "no-param-reassign": 0,
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "no-console": "off",
+      "react/jsx-props-no-spreading": [
+        "error",
+        {
+          "html": "ignore",
+          "custom": "ignore",
+          "exceptions": [""]
+        }
+      ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "VariableDeclarator": {
+            "array": false,
+            "object": false
+          },
+          "AssignmentExpression": {
+            "array": false,
+            "object": true
+          }
+        },
+        {
+          "enforceForRenamedProperties": false
+        }
+      ],
+      "prettier/prettier": 0,
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "no-use-before-define": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".tsx"]
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "jsx-a11y/label-has-associated-control": [
+        2,
+        {
+          "labelAttributes": ["htmlFor"],
+          "controlComponents": ["Field"],
+          "depth": 3
+        }
+      ]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "typescript": {},
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
+    }
+  }
+  
