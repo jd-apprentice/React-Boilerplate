@@ -12,7 +12,7 @@
 - MobX-State-Tree
 - Apisauce
 
-You can uninstall anything with `npm uninstall NOMBRE_DEPENDENCIA` everything is listed on the `package.json`. 
+You can uninstall anything with `npm uninstall DEPENDENCY_NAME` everything is listed on the `package.json`. 
 
 ## 🏃‍♂️ Run project
 
