@@ -1,4 +1,6 @@
-const API_URL = window.config.baseUrl;
+import config from "config/index";
+
+const API_URL = config.app.baseURL || "";
 
 /**
  * The options used to configure the API.

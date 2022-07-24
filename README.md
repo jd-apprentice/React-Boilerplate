@@ -23,6 +23,8 @@ Make sure you have node.js and git installed
 
 >> cd ./React-Boilerplate
 
+>> cp .env.example .env
+
 >> npm run install
 
 >> npm run start

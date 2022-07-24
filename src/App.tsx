@@ -1,17 +1,16 @@
 import { Divider } from "@mui/material";
-import BasicAlerts from "components/common/alert";
-import BasicRating from "components/common/rating";
-import React from "react";
+import { Alert, Rating } from "components/index";
+import React, { ReactElement } from "react";
 
-const App = () => {
+const App: React.FC = (): ReactElement => {
   return (
     <>
       <h1 className="title">React + TS + Sass + Eslint + Prettier + MobX + Apisauce</h1>
       <Divider>
-      <BasicRating text="Quality" />
+        <Rating text="Quality" />
       </Divider>
       <Divider>
-      <BasicAlerts text="This is an sample alert" />
+        <Alert text="This is an sample alert" />
       </Divider>
     </>
   );

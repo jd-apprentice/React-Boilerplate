@@ -1,7 +1,3 @@
-export {};
-
-declare global { 
-    interface Window {
-      baseUrl: string;
-    }
-}
+/* Declare modules here if needed */
+/* Example -> */
+// declare module "ModuleName"

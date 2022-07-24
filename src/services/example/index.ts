@@ -1,6 +1,7 @@
 import { ApiResponse } from "apisauce";
-import { Api } from "./api";
-import { getGeneralApiProblem } from "./api-problem";
+import { ExampleResponse } from "models/interfaces/types";
+import { Api } from "../api/api";
+import { getGeneralApiProblem } from "../api/api-problem";
 
 export class ExampleApi {
   private api: Api;
@@ -9,10 +10,10 @@ export class ExampleApi {
     this.api = api;
   }
 
-  async getExample(): Promise<any> {
+  async getExample() {
     try {
       const response: ApiResponse<never> = await this.api.apisauce.get(
-        `your/route`
+        `bank/random_bank`
       );
       if (!response.ok) {
         const problem = getGeneralApiProblem(response);
@@ -26,7 +27,7 @@ export class ExampleApi {
     }
   }
 
-  async postExample(payload: any):  Promise<any> {
+  async postExample(payload: ExampleResponse) {
     try {
       const response: ApiResponse<never> = await this.api.apisauce.post(
         `your/route`, { payload }
@@ -43,10 +44,10 @@ export class ExampleApi {
     }
   }
 
-  async putExample(id: any):  Promise<any> {
+  async putExample(id: string, payload: ExampleResponse) {
     try {
       const response: ApiResponse<never> = await this.api.apisauce.put(
-        `your/route/${id}`
+        `your/route/${id}`, payload
       );
       if (!response.ok) {
         const problem = getGeneralApiProblem(response);
@@ -60,7 +61,7 @@ export class ExampleApi {
     }
   }
 
-  async deleteExample(id: any):  Promise<any> {
+  async deleteExample(id: string) {
     try {
       const response: ApiResponse<never> = await this.api.apisauce.delete(
         `your/route/${id}`
@@ -78,5 +79,3 @@ export class ExampleApi {
   }
   
 }
-
-

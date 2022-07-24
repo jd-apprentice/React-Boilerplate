@@ -1,6 +1,6 @@
 import { ApisauceInstance, create } from "apisauce";
 import { ApiConfig, DEFAULT_API_CONFIG } from "./api-config";
-import { ExampleApi } from "./example";
+import { ExampleApi } from "../index";
 
 /**
  * Manages all requests to the API.
