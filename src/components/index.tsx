@@ -1,4 +1,6 @@
-export { default as Home } from "./section/home/index";
-export { default as About } from "./section/about/index";
-export { default as Alert } from "./common/alert/index";
-export { default as Rating } from "./common/rating/index";
+export * from "./section/home/index";
+export * from "./section/about/index";
+export * from "./common/alert/index";
+export * from "./common/rating/index";
+export * from "./common/card/index";
+export * from "./common/item/index";
