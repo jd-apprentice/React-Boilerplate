@@ -13,4 +13,13 @@ export interface ExampleResponse {
     swift_bic: string;
 }
 
+export interface MediaCardProps {
+    image: string;
+    alt: string;
+    height: string;
+    maxWidth: number;
+    title: string;
+    body: string;
+}
+
 export type BasicAlertsProps = BasicRatingProps

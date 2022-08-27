@@ -4,9 +4,71 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: white;
-    background-color: palevioletred;
+    background-color: #2d2929;
+opacity: 1;
+background-image: radial-gradient(#6b3a3a 2px, #2d2929 2px);
+background-size: 40px 40px;
 }
 
-.title {
+//----Display----//
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+//--------------//
+
+//----Margin----//
+.mx {
+
+    &-10 {
+        margin-left: $md;
+        margin-right: $md;
+    }
+}
+
+//--------------//
+
+//----Text----//
+.text-center {
     text-align: center;
 }
+
+.text-none {
+    text-decoration: none;
+}
+
+//--------------//
+
+//----Font----//
+.fs {
+
+    &-5 {
+        font-size: $xsm;
+    }
+
+    &-3 {
+        font-size: $md;
+    }
+
+    &-1 {
+        font-size: $xl;
+    }
+}
+
+.x {
+    &-2 {
+        font-size: $x2;
+    }
+
+    &-3 {
+        font-size: $x3;
+    }
+
+    &-4 {
+        font-size: $x4;
+    }
+}
+
+
+//--------------//

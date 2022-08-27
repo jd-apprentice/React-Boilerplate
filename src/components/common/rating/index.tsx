@@ -4,7 +4,7 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import { BasicRatingProps } from 'models/interfaces/types';
 
-const BasicRating: React.FC<BasicRatingProps> = (props: BasicRatingProps) => {
+export const BasicRating: React.FC<BasicRatingProps> = (props: BasicRatingProps) => {
   const { text } = props;
   const [value, setValue] = React.useState<number | null>(2);
 
@@ -25,5 +25,3 @@ const BasicRating: React.FC<BasicRatingProps> = (props: BasicRatingProps) => {
     </Box>
   );
 }
-
-export default BasicRating;

@@ -1,17 +1,14 @@
-import { Divider } from "@mui/material";
-import { Alert, Rating } from "components/index";
-import React, { ReactElement } from "react";
+import { Container } from "@mui/material";
+import { Home } from "components";
+import React from "react";
 
-const App: React.FC = (): ReactElement => {
+const App: React.FC = (): React.ReactElement => {
   return (
     <>
-      <h1 className="title">React + TS + Sass + Eslint + Prettier + MobX + Apisauce</h1>
-      <Divider>
-        <Rating text="Quality" />
-      </Divider>
-      <Divider>
-        <Alert text="This is an sample alert" />
-      </Divider>
+      <Container fixed>
+        <h1 className="text-center x-2">React + TS + Sass + Eslint + Prettier + MobX + Apisauce</h1>
+        <Home />
+      </Container>
     </>
   );
 }

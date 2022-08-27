@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "outDir": "./build",
     "baseUrl": "src",
     "allowJs": true,
     "skipLibCheck": true,
