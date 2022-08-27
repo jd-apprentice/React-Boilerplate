@@ -1,36 +1,20 @@
-## build runner
-FROM node:lts-alpine as build-runner
+## We install nodejs in order to run the application
+FROM node:lts-alpine
 
-# Set temp directory
-WORKDIR /tmp/app
-
-# Move package.json
-COPY package.json .
-
-# Install dependencies
-RUN npm install
-
-# Move source files
-COPY src ./src
-COPY tsconfig.json .
-
-# Build project
-RUN npm run build
-
-# Production runner
-FROM node:lts-alpine as prod-runner
-
-# Set work directory
+## Create the folder for the application
 WORKDIR /app
 
-# Copy package.json from build-runner
-COPY --from=build-runner /tmp/app/package.json /app/package.json
+## Copy the package.json in order to install the necessary dependencies
+COPY ./package.json .
 
-# Install dependencies
-RUN npm install --only=production
+## We install the dependencies
+RUN npm install
 
-# Move build files
-COPY --from=build-runner /tmp/app/build /app/build
+## Copy everything to the application
+COPY . /app
 
-# Start bot
-CMD [ "node", "build/index.js" ]
+## Expose the port
+EXPOSE 3000
+
+## Run the application
+CMD npm run start
