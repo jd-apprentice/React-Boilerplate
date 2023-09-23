@@ -3,6 +3,7 @@ FROM node:alpine3.17 as build-runner
 WORKDIR /tmp/app
 COPY package*.json ./
 RUN npm i --legacy-peer-deps
+COPY public ./public
 COPY src ./src
 COPY tsconfig.json .
 COPY tsconfig.node.json .
