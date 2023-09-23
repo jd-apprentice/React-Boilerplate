@@ -1,0 +1,8 @@
+{
+  "short_name": "React Boilerplate",
+  "name": "React + Mui + MobX",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
