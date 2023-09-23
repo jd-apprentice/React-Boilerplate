@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
-import { BasicRatingProps } from 'models/interfaces/types';
+import { BasicRatingProps } from '@/models/interfaces/types';
 
 export const BasicRating: React.FC<BasicRatingProps> = (props: BasicRatingProps) => {
   const { text } = props;

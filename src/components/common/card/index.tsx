@@ -5,11 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { MediaCardProps } from 'models/interfaces/types';
+import { MediaCardProps } from '@/models/interfaces/types';
 
 export function MediaCard({ image, alt, height, maxWidth, title, body }: MediaCardProps): React.ReactElement<MediaCardProps> {
     return (
-        <Card sx={{ maxWidth,  }}>
+        <Card sx={{ maxWidth, }}>
             <CardMedia
                 component="img"
                 height={height}

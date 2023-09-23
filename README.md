@@ -11,6 +11,7 @@
 - Sass
 - MobX-State-Tree
 - Apisauce
+- Vite
 
 You can uninstall anything with `npm uninstall DEPENDENCY_NAME` everything is listed on the `package.json`. 
 

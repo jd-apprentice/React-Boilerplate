@@ -1,4 +1,4 @@
-import config from "config/index";
+import config from "@/config/index";
 
 const API_URL = config.app.baseURL || "";
 

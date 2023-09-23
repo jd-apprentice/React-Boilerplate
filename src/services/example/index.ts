@@ -1,5 +1,5 @@
 import { ApiResponse } from "apisauce";
-import { ExampleResponse } from "models/interfaces/types";
+import { ExampleResponse } from "@/models/interfaces/types";
 import { Api } from "../api/api";
 import { getGeneralApiProblem } from "../api/api-problem";
 
@@ -77,5 +77,5 @@ export class ExampleApi {
       return { kind: "bad-data" };
     }
   }
-  
+
 }

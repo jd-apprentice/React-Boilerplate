@@ -1,6 +1,6 @@
 import { Stack } from '@mui/material';
-import { Item } from 'components';
-import { MediaCard } from 'components/common/card';
+import { Item } from '@/components';
+import { MediaCard } from '@/components/common/card';
 import * as React from 'react';
 
 export function Home(): React.ReactElement {

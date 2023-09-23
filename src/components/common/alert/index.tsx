@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
-import { BasicAlertsProps } from 'models/interfaces/types';
+import { BasicAlertsProps } from '@/models/interfaces/types';
 
 export const BasicAlerts: React.FC<BasicAlertsProps> = ({ text }: BasicAlertsProps) => {
   return (

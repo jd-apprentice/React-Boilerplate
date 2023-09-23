@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { Home } from "components";
+import { Home } from "@/components";
 import React from "react";
 
 const App: React.FC = (): React.ReactElement => {

@@ -1,20 +1,23 @@
-## We install nodejs in order to run the application
-FROM node:lts-alpine
+# Building layer
+FROM node:alpine3.17 as build-runner
+WORKDIR /tmp/app
+COPY package*.json ./
+RUN npm i --legacy-peer-deps
+COPY src ./src
+COPY tsconfig.json .
+COPY tsconfig.node.json .
+COPY vite.config.ts .
+COPY index.html .
+RUN npm run build
 
-## Create the folder for the application
+# Runtime (production) layer
+FROM node:alpine3.17 as prod-runner
 WORKDIR /app
-
-## Copy the package.json in order to install the necessary dependencies
-COPY ./package.json .
-
-## We install the dependencies
-RUN npm install
-
-## Copy everything to the application
-COPY . /app
-
-## Expose the port
+COPY --from=build-runner /tmp/app/package*.json ./
+RUN npm i --omit=dev --legacy-peer-deps
+COPY --from=build-runner /tmp/app/dist ./dist
+RUN npm i -g serve
 EXPOSE 3000
 
-## Run the application
-CMD npm run start
+# Start application
+CMD ["serve", "-s", "dist", "-l", "3000"]
