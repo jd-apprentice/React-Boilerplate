@@ -12,21 +12,12 @@
 - MobX-State-Tree
 - Apisauce
 - Vite
+- Vitest
 
 You can uninstall anything with `npm uninstall DEPENDENCY_NAME` everything is listed on the `package.json`. 
 
 ## 🏃‍♂️ Run project
 
-Make sure you have node.js and git installed
+You can run it locally with `make` or docker with `make compose` (you need to have docker installed).
 
-```
->> git clone https://github.com/jd-apprentice/React-Boilerplate.git
-
->> cd ./React-Boilerplate
-
->> cp .env.example .env
-
->> npm run install
-
->> npm run start
-```
+Check the `Makefile` for more commands.
